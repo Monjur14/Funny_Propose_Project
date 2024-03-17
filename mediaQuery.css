@@ -1,13 +1,30 @@
 @media (0px < width <= 370px) {
     .btn_container {
         gap: 8rem;
-        margin-top: 1.5rem;
+        margin-top: 2.5rem;
     }
     .text_container {
         margin-top: 1rem;
         gap: 0rem;
         font-size: 14px;
         line-height: 2.3rem;
+    }
+    img{
+        width: 300px;       
+    }
+    button{
+        font-size: 23px;
+    }
+    button::before {
+        left: -25px;
+        bottom: -17.5px;
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        z-index: -1;
+    }
+    .main_container{
+        margin-bottom: 0rem;
     }
 }
 @media (400px < width <= 650px) {

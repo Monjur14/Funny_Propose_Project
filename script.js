@@ -124,7 +124,7 @@ document.querySelector(".button5").addEventListener("click", () => {
     gifContainer.innerHTML = ""
     gifContainer.innerHTML = `<img src="Asset/gifgit01.gif" alt="">`
     text1.innerText = "Aur kitna vhaw khayogi,"
-    text2.innerText = 'Soch lo acchey se!!!'
+    text2.innerText = 'Soch lo acchey se...'
     document.querySelector(".button5").classList.add("none")
     document.querySelector(".button6").classList.remove("none")
 })
