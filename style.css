@@ -6,40 +6,40 @@
   /* border: 1px solid red; */
 }
 .container {
-  width: 100%;
+  max-width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-#confetti{
-  position: absolute;
-  inset: 1;
-}
 .main_container {
   margin-bottom: 1rem;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 img {
-  width: 400px;
+  max-width: 400px;
   height: 300px;
 }
 .cryGif{
-    width: 350px;
+    max-width: 350px;
     height: 280px;
 }
 .gif_container {
   height: 300px;
-  width: 400px;
+  max-width: 400px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 .text_container {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -51,11 +51,11 @@ img {
     display: block;
 }
 .btn_container {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   gap: 7rem;
-  margin-top: 3rem;
+  margin-top: 1.3rem;
 }
 button {
   cursor: pointer;

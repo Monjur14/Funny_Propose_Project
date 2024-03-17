@@ -2,11 +2,8 @@ let gifContainer = document.querySelector(".gif_container")
 let text1 = document.querySelector(".text1")
 let text2 = document.querySelector(".text2")
 let text3 = document.querySelector(".text3")
-let canvas = document.getElementById("confetti")
-// const jsConfetti = new JSConfetti()
 
-document.querySelector(".button1").addEventListener("click", () => {
-    
+document.querySelector(".button1").addEventListener("click", () => {   
     gifContainer.innerHTML = ""
     gifContainer.innerHTML = `<img src="Asset/tenor1.gif" alt="" class="cryGif">`
     text1.innerText = "Buddhuuu, peheley thora nakhrey"
@@ -15,29 +12,28 @@ document.querySelector(".button1").addEventListener("click", () => {
     document.querySelector(".button1").classList.add("none")
     document.querySelector(".button2").classList.add("none")
 })
+
 document.querySelector(".button_final").addEventListener("click", () => {
     var end = Date.now() + (6 * 1000);
+    var colors = ['#bb0000', '#ffffff'];
 
-// go Buckeyes!
-var colors = ['#bb0000', '#ffffff'];
+    (function frame() {
+        confetti({
+            particleCount: 2,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: colors
+    });
+    confetti({
+        particleCount: 2,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        colors: colors
+    });
 
-(function frame() {
-  confetti({
-    particleCount: 2,
-    angle: 60,
-    spread: 55,
-    origin: { x: 0 },
-    colors: colors
-  });
-  confetti({
-    particleCount: 2,
-    angle: 120,
-    spread: 55,
-    origin: { x: 1 },
-    colors: colors
-  });
-
-  if (Date.now() < end) {
+    if (Date.now() < end) {
     requestAnimationFrame(frame);
   }
 }());
@@ -61,7 +57,6 @@ setTimeout(() => {
         ticks: ticks,
         origin: {
           x: Math.random(),
-          // since particles fall down, skew start toward the top
           y: (Math.random() * skew) - 0.2
         },
         colors: ['#ffffff'],
@@ -76,6 +71,7 @@ setTimeout(() => {
       }
     }());
 }, 1000)
+
     gifContainer.innerHTML = ""
     gifContainer.innerHTML = `<img src="Asset/tenor7.gif" alt="">`
     setTimeout(() => {
@@ -94,6 +90,7 @@ setTimeout(() => {
     document.querySelector(".button7").classList.add("none")
     document.querySelector(".button_final").classList.add("none")
 })
+
 document.querySelector(".button2").addEventListener("click", () => {
     document.querySelector(".button1").classList.add("none")
     document.querySelector(".button_final").classList.remove("none")
@@ -104,6 +101,7 @@ document.querySelector(".button2").addEventListener("click", () => {
     document.querySelector(".button2").classList.add("none")
     document.querySelector(".button3").classList.remove("none")
 })
+
 document.querySelector(".button3").addEventListener("click", () => {
     gifContainer.innerHTML = ""
     gifContainer.innerHTML = `<img src="Asset/gifgit03.gif" alt="">`
@@ -112,14 +110,16 @@ document.querySelector(".button3").addEventListener("click", () => {
     document.querySelector(".button3").classList.add("none")
     document.querySelector(".button4").classList.remove("none")
 })
+
 document.querySelector(".button4").addEventListener("click", () => {
     gifContainer.innerHTML = ""
-    gifContainer.innerHTML = `<img src="Asset/tenor9.gif" alt="">`
+    gifContainer.innerHTML = `<img src="Asset/tenor9.gif" alt="" class="cryGif">`
     text1.innerText = "Ice Cream dilaungi,"
     text2.innerText = ' Chocolate dilaungi'
     document.querySelector(".button4").classList.add("none")
     document.querySelector(".button5").classList.remove("none")
 })
+
 document.querySelector(".button5").addEventListener("click", () => {
     gifContainer.innerHTML = ""
     gifContainer.innerHTML = `<img src="Asset/gifgit01.gif" alt="">`
@@ -128,6 +128,7 @@ document.querySelector(".button5").addEventListener("click", () => {
     document.querySelector(".button5").classList.add("none")
     document.querySelector(".button6").classList.remove("none")
 })
+
 document.querySelector(".button6").addEventListener("click", () => {
     gifContainer.innerHTML = ""
     gifContainer.innerHTML = `<img src="Asset/tenor5.gif" alt="" class="cryGif">`
@@ -136,6 +137,7 @@ document.querySelector(".button6").addEventListener("click", () => {
     document.querySelector(".button6").classList.add("none")
     document.querySelector(".button7").classList.remove("none")
 })
+
 document.querySelector(".button7").addEventListener("click", () => {
     gifContainer.innerHTML = ""
     gifContainer.innerHTML = `<img src="Asset/gifgit02.gif" alt="">`
