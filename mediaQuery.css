@@ -27,7 +27,7 @@
         z-index: -1;
     }
     .main_container{
-        margin-bottom: 0rem;
+        margin-bottom: 2rem;
     }
 }
 @media (385px < width <= 400px) {
