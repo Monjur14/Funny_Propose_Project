@@ -183,6 +183,7 @@ document.querySelector(".button5").addEventListener("click", () => {
 
 if (window.innerWidth <= 360) {
     document.querySelector(".button6").addEventListener("click", () => {
+        document.querySelector(".button6").classList.add("none")  
         document.querySelector(".button8").classList.remove("none")
         document.querySelector(".button7").classList.add("none")  
         gifContainer.innerHTML = ""
