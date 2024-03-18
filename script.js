@@ -170,13 +170,13 @@ document.querySelector(".button5").addEventListener("click", () => {
 
 if (window.innerWidth <= 1080) {
     document.querySelector(".button6").addEventListener("click", () => {
-        document.querySelector(".button6").classList.add("none")  
-        document.querySelector(".button8").classList.remove("none")
-        document.querySelector(".button7").classList.add("none")  
+        document.querySelector(".button6").classList.add("none")
+        document.querySelector(".button7").classList.remove("none")
+        
         gifContainer.innerHTML = ""
-        gifContainer.innerHTML = `<img src="Asset/gifgit02.gif" alt="" class="angry">`
-        text1.innerText = "Baas aab or nhi, apna final"
-        text2.innerText = 'decision de do, Yes or No!!!'
+        gifContainer.innerHTML = `<img src="Asset/tenor5.gif" alt="" class="cryGif">`
+        text1.innerText = "Ek aur bar soch lo,"
+        text2.innerText = 'Yaar maan jaw nah!!!'
     })
 } else {
     document.querySelector(".button6").addEventListener("click", () => {
