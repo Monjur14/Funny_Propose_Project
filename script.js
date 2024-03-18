@@ -3,6 +3,37 @@ let text1 = document.querySelector(".text1")
 let text2 = document.querySelector(".text2")
 let text3 = document.querySelector(".text3")
 
+function preloadImages(images, callback) {
+    var loadedImages = 0;
+    var numImages = images.length;
+
+    images.forEach(function(src) {
+        var img = new Image();
+        img.onload = function() {
+            loadedImages++;
+            if (loadedImages === numImages) {
+                callback();
+            }
+        };
+        img.src = src;
+    });
+}
+
+var imagePaths = [
+    "Asset/tenor1.gif",
+    "Asset/tenor7.gif",
+    "Asset/tenor8.gif",
+    "Asset/gifgit03.gif",
+    "Asset/tenor9.gif",
+    "Asset/gifgit01.gif",
+    "Asset/tenor5.gif",
+    "Asset/gifgit02.gif"
+];
+
+preloadImages(imagePaths, function() {
+    console.log("All images preloaded.");
+});
+
 document.querySelector(".button1").addEventListener("click", () => {   
     gifContainer.innerHTML = ""
     gifContainer.innerHTML = `<img src="Asset/tenor1.gif" alt="" class="cryGif">`
