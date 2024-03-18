@@ -41,9 +41,6 @@ if (document.body.scrollHeight > window.innerHeight) {
     document.body.style.overflowY = 'hidden';
 }
 
-
-
-
 document.querySelector(".button1").addEventListener("click", () => {   
     gifContainer.innerHTML = ""
     gifContainer.innerHTML = `<img src="Asset/tenor1.gif" alt="" class="cryGif">`
@@ -119,8 +116,8 @@ setTimeout(() => {
         gifContainer.innerHTML = ""
         gifContainer.innerHTML = `<img src="Asset/tenor10.gif" alt="">`
     }, 2100)
-    text1.innerText = "Over the moon,"
-    text2.innerText = " thank you❤️"
+    text1.innerText = "I'm Over the Moon,"
+    text2.innerText = " Thank You❤️"
     text3.innerText = ""
     document.querySelector(".button1").classList.add("none")
     document.querySelector(".button2").classList.add("none")
@@ -345,5 +342,3 @@ document.querySelector(".spn").addEventListener("mouseover", () => {
     btn8.style.top = `${topParcentage - 5}%`;
     btn8.style.left = `${leftParcentage - 10}%`;
 })
-
-
