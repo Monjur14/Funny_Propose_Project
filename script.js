@@ -217,5 +217,27 @@ document.querySelector(".button8").addEventListener("mouseover", () => {
     btn8.style.top = `${topParcentage - 5}%`;
     btn8.style.left = `${leftParcentage - 10}%`;
 })
+document.querySelector(".button8").addEventListener("click", () => {
+    document.querySelector(".button8").classList.add("absolute")
+    document.querySelector(".button9").classList.remove("none")
+    document.querySelector(".button9").classList.add("visibility")
+    document.querySelector(".button8").classList.add("absolute")
+    document.querySelector(".button8").classList.add("phudo")
+    let randomTop = Math.floor(Math.random() * screenHeight) + 1;
+    let randomLeft = Math.floor(Math.random() * screenWidth) + 1;
+    let topParcentage = (randomTop / screenHeight) * 95;
+    let leftParcentage = (randomLeft / screenWidth) * 100;
 
+    if(topParcentage < 5){
+        topParcentage = 5
+    }
+    if(leftParcentage < 10){
+        leftParcentage = 10
+    }
+    if(leftParcentage > 82){
+        leftParcentage = 92
+    }
+    btn8.style.top = `${topParcentage - 5}%`;
+    btn8.style.left = `${leftParcentage - 10}%`;
+})
 
