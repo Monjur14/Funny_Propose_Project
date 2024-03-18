@@ -194,7 +194,7 @@ document.querySelector(".button7").addEventListener("mouseout", () => {
     document.querySelector(".button8").classList.remove("none")   
 })
 
-document.querySelector(".button8").addEventListener("mouseover", () => {
+document.querySelector(".button8").addEventListener("click", () => {
     document.querySelector(".button8").classList.add("absolute")
     document.querySelector(".button9").classList.remove("none")
     document.querySelector(".button9").classList.add("visibility")
@@ -217,7 +217,8 @@ document.querySelector(".button8").addEventListener("mouseover", () => {
     btn8.style.top = `${topParcentage - 5}%`;
     btn8.style.left = `${leftParcentage - 10}%`;
 })
-document.querySelector(".button8").addEventListener("click", () => {
+
+document.querySelector(".button8").addEventListener("mouseover", () => {
     document.querySelector(".button8").classList.add("absolute")
     document.querySelector(".button9").classList.remove("none")
     document.querySelector(".button9").classList.add("visibility")
