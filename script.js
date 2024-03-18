@@ -171,7 +171,7 @@ document.querySelector(".button6").addEventListener("click", () => {
 
 document.querySelector(".button7").addEventListener("click", () => {
     gifContainer.innerHTML = ""
-    gifContainer.innerHTML = `<img src="Asset/gifgit02.gif" alt="">`
+    gifContainer.innerHTML = `<img src="Asset/gifgit02.gif" alt="" class="angry">`
     text1.innerText = "Baas aab or nhi, apna final"
     text2.innerText = 'decision de do, Yes or No!!!'
     document.querySelector(".button6").classList.add("none")

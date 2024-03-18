@@ -1,4 +1,4 @@
-@media (0px < width <= 370px) {
+@media (0px < width <= 385px) {
     .btn_container {
         gap: 8rem;
         margin-top: 2.5rem;
@@ -10,7 +10,10 @@
         line-height: 2.3rem;
     }
     img{
-        width: 300px;       
+        max-width: 300px;       
+    }
+    .angry{
+        width: full;
     }
     button{
         font-size: 23px;
@@ -27,11 +30,63 @@
         margin-bottom: 0rem;
     }
 }
-@media (400px < width <= 650px) {
-    
+@media (385px < width <= 400px) {
+    img{
+        max-width: 360px;       
+    }
+    button{
+        font-size: 23px;
+    }
+    button::before {
+        left: -25px;
+        bottom: -17.5px;
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        z-index: -1;
+    }
+    .main_container{
+        margin-bottom: 0rem;
+    }
+    .btn_container {
+        gap: 9rem;
+        margin-top: 2.8rem;
+    }
+    .text_container {
+        margin-top: 1.4rem;
+        gap: 0rem;
+        font-size: 15px;
+        line-height: 2.3rem;
+    }
 }
-@media (650px < width <= 1080px) {
-    
+@media (400px < width <= 650px) {
+    img{
+        max-width: 390px;       
+    }
+    button{
+        font-size: 23px;
+    }
+    button::before {
+        left: -25px;
+        bottom: -17.5px;
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        z-index: -1;
+    }
+    .main_container{
+        margin-bottom: 0rem;
+    }
+    .btn_container {
+        gap: 9rem;
+        margin-top: 2.9rem;
+    }
+    .text_container {
+        margin-top: 1.5rem;
+        gap: 0rem;
+        font-size: 16px;
+        line-height: 2.3rem;
+    }
 }
 @media (1080px < width <= 1700px) {
     
