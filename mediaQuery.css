@@ -2,6 +2,7 @@
     .btn_container {
         gap: 8rem;
         margin-top: 2.5rem;
+        margin-bottom: 2rem;
     }
     .text_container {
         margin-top: 1rem;
@@ -29,9 +30,7 @@
     .main_container{
         margin-bottom: 0rem;
     }
-    .container{
-        padding-bottom: 2rem;
-    }
+    
 }
 @media (385px < width <= 400px) {
     img{
