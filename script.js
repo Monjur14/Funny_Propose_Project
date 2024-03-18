@@ -171,17 +171,7 @@ document.querySelector(".button5").addEventListener("click", () => {
     document.querySelector(".button6").classList.remove("none")
 })
 
-// document.querySelector(".button6").addEventListener("click", () => {
-//     gifContainer.innerHTML = ""
-//     gifContainer.innerHTML = `<img src="Asset/tenor5.gif" alt="" class="cryGif">`
-//     text1.innerText = "Ek aur bar soch lo,"
-//     text2.innerText = 'Yaar maan jaw nah!!!'
-//     document.querySelector(".button6").classList.add("none")
-//     document.querySelector(".button7").classList.remove("none")
-// })
-
-
-if (window.innerWidth <= 360) {
+if (window.innerWidth <= 1080) {
     document.querySelector(".button6").addEventListener("click", () => {
         document.querySelector(".button6").classList.add("none")  
         document.querySelector(".button8").classList.remove("none")
@@ -208,19 +198,61 @@ document.querySelector(".button7").addEventListener("click", () => {
     gifContainer.innerHTML = `<img src="Asset/gifgit02.gif" alt="" class="angry">`
     text1.innerText = "Baas aab or nhi, apna final"
     text2.innerText = 'decision de do, Yes or No!!!'
-    document.querySelector(".button6").classList.add("none")
-    document.querySelector(".button7").classList.remove("none")
-})
-
-document.querySelector(".button7").addEventListener("mouseout", () => {
     document.querySelector(".button7").classList.add("none")
-    document.querySelector(".button8").classList.remove("none")   
+    document.querySelector(".button10").classList.remove("none")
 })
 
-document.querySelector(".button8").addEventListener("click", () => {
+let isClicked = false;
+
+document.querySelector(".button10").addEventListener("click", () => {
+    isClicked = true;
+    document.querySelector(".button10").classList.add("none");
+    document.querySelector(".button9").classList.remove("none");
+    document.querySelector(".button8").classList.remove("none");
+    document.querySelector(".button8").classList.add("absolute");
+    document.querySelector(".button9").classList.remove("none");
+    document.querySelector(".button9").classList.add("visibility");
+    document.querySelector(".button8").classList.add("phudo");
+    document.querySelector(".button11").classList.add("none");
+});
+
+document.querySelector(".button10").addEventListener("mouseout", () => {
+    if (!isClicked) {
+        document.querySelector(".button11").classList.remove("none");
+        document.querySelector(".button10").classList.add("none");
+    }
+});
+
+document.querySelector(".button10").addEventListener("mouseover", () => {
+    isClicked = false;
+});
+
+document.querySelector(".button11").addEventListener("mouseover", () => {
+    document.querySelector(".button11").classList.add("none")
+    document.querySelector(".button8").classList.remove("none")
     document.querySelector(".button8").classList.add("absolute")
+    document.querySelector(".button8").classList.add("phudo")
     document.querySelector(".button9").classList.remove("none")
     document.querySelector(".button9").classList.add("visibility")
+    let randomTop = Math.floor(Math.random() * screenHeight) + 1;
+    let randomLeft = Math.floor(Math.random() * screenWidth) + 1;
+    let topParcentage = (randomTop / screenHeight) * 95;
+    let leftParcentage = (randomLeft / screenWidth) * 100;
+
+    if(topParcentage < 5){
+        topParcentage = 5
+    }
+    if(leftParcentage < 10){
+        leftParcentage = 10
+    }
+    if(leftParcentage > 82){
+        leftParcentage = 92
+    }
+    btn8.style.top = `${topParcentage - 5}%`;
+    btn8.style.left = `${leftParcentage - 10}%`;
+})
+document.querySelector(".button8").addEventListener("click", () => {
+    document.querySelector(".button8").classList.add("absolute")   
     document.querySelector(".button8").classList.add("absolute")
     document.querySelector(".button8").classList.add("phudo")
     let randomTop = Math.floor(Math.random() * screenHeight) + 1;
