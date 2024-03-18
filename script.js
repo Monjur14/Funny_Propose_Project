@@ -2,6 +2,9 @@ let gifContainer = document.querySelector(".gif_container")
 let text1 = document.querySelector(".text1")
 let text2 = document.querySelector(".text2")
 let text3 = document.querySelector(".text3")
+let btn8 = document.querySelector(".button8");
+let screenWidth = window.screen.width;
+let screenHeight = window.screen.height;
 
 function preloadImages(images, callback) {
     var loadedImages = 0;
@@ -33,6 +36,13 @@ var imagePaths = [
 preloadImages(imagePaths, function() {
     console.log("All images preloaded.");
 });
+
+if (document.body.scrollHeight > window.innerHeight) {
+    document.body.style.overflowY = 'hidden';
+}
+
+
+
 
 document.querySelector(".button1").addEventListener("click", () => {   
     gifContainer.innerHTML = ""
@@ -120,6 +130,7 @@ setTimeout(() => {
     document.querySelector(".button6").classList.add("none")
     document.querySelector(".button7").classList.add("none")
     document.querySelector(".button_final").classList.add("none")
+    document.querySelector(".button8").classList.add("none")
 })
 
 document.querySelector(".button2").addEventListener("click", () => {
@@ -177,3 +188,34 @@ document.querySelector(".button7").addEventListener("click", () => {
     document.querySelector(".button6").classList.add("none")
     document.querySelector(".button7").classList.remove("none")
 })
+
+document.querySelector(".button7").addEventListener("mouseout", () => {
+    document.querySelector(".button7").classList.add("none")
+    document.querySelector(".button8").classList.remove("none")   
+})
+
+document.querySelector(".button8").addEventListener("mouseover", () => {
+    document.querySelector(".button8").classList.add("absolute")
+    document.querySelector(".button9").classList.remove("none")
+    document.querySelector(".button9").classList.add("visibility")
+    document.querySelector(".button8").classList.add("absolute")
+    document.querySelector(".button8").classList.add("phudo")
+    let randomTop = Math.floor(Math.random() * screenHeight) + 1;
+    let randomLeft = Math.floor(Math.random() * screenWidth) + 1;
+    let topParcentage = (randomTop / screenHeight) * 95;
+    let leftParcentage = (randomLeft / screenWidth) * 100;
+
+    if(topParcentage < 5){
+        topParcentage = 5
+    }
+    if(leftParcentage < 10){
+        leftParcentage = 10
+    }
+    if(leftParcentage > 82){
+        leftParcentage = 92
+    }
+    btn8.style.top = `${topParcentage - 5}%`;
+    btn8.style.left = `${leftParcentage - 10}%`;
+})
+
+

@@ -88,9 +88,53 @@
         line-height: 2.3rem;
     }
 }
-@media (1080px < width <= 1700px) {
-    
+@media (650px < width <= 1080px) {
+    img{
+        width: 450px;       
+    }
+    button{
+        font-size: 23px;
+    }
+    button::before {
+        left: -25px;
+        bottom: -17.5px;
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        z-index: -1;
+    }
+    .main_container{
+        margin-bottom: 0rem;
+    }
+    .btn_container {
+        gap: 10rem;
+        margin-top: 3.5rem;
+    }
+    .text_container {
+        margin-top: 2.5rem;
+        gap: 0rem;
+        font-size: 16px;
+        line-height: 2.3rem;
+    }
 }
-@media (1700px < width <= 10000px) {
-    
+@media (1500px < width <= 5000px) {
+    img{
+        width: 700px;       
+    }
+    button{
+        font-size: 23px;
+    }
+    .main_container{
+        margin-bottom: 0rem;
+    }
+    .btn_container {
+        gap: 10rem;
+        margin-top: 3.5rem;
+    }
+    .text_container {
+        margin-top: 2.5rem;
+        gap: 0rem;
+        font-size: 18px;
+        line-height: 2.3rem;
+    }
 }
